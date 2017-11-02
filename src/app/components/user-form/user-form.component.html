@@ -1,0 +1,4 @@
+<form name="form" #userForm="ngForm">
+  <label> Nom:<input type="text" [(ngModel)]="user.name" name= "userName" minlength="3"></label>
+  <button (click)="createUser()" [disabled]="!userForm.form.valid">Add User</button>
+</form>

@@ -1,0 +1,17 @@
+<h3>Classic utilisation</h3>
+<div>
+
+
+    <div *ngFor="let topic of service.getTopics()">
+      <h3>{{topic.title}}</h3>
+      <div *ngFor="let c of topic.comments">
+        <strong>{{c.user?c.user.name:'Anonymous'}}</strong> says: {{c.content}}
+      </div>
+    </div>
+
+
+</div>
+
+<h3>Various Providers</h3>
+
+<p>Login Id is {{loginService.getUserId()}} </p>

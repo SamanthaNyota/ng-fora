@@ -1,0 +1,27 @@
+
+.user {
+  margin: 20px;
+  border: thin black dashed;
+  padding: 20px;
+}
+
+.city {
+
+  margin: 20px;
+  border: thin grey dotted;
+  padding: 20px;
+
+}
+
+.important {
+  text-decoration: underline;
+  text-decoration-color: darkred;
+}
+
+.even {
+  background-color: lightcoral;
+}
+
+.odd {
+  background-color: lightgrey;
+}

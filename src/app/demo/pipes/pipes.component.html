@@ -1,0 +1,16 @@
+<div>
+  <h3>Pipes</h3>
+
+  <p><a href="https://angular.io/api?type=pipe">Built-in pipes</a></p>
+
+  <div *ngFor="let topic of service.getTopics()">
+    <h3>{{topic.title}}</h3>
+    <div *ngFor="let c of topic.comments | slice:0:2">
+      <!-- We need parenthesis -->
+      <strong>{{ (c.user?c.user.name:'Anonymous') | uppercase}}</strong> says: {{c.content}}
+    </div>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,15 @@
+<section>
+  <h2>All Topics</h2>
+
+  <div *ngFor="let t of getTopics()">
+    <h3>{{t.title}}</h3>
+    <p *ngFor="let c of t.comments">
+      <strong>{{c.user?c.user.name:'Anonymous'}} </strong> says :{{c.content}}
+    </p>
+  </div>
+
+  <!-- TODO : link the form to the controller.getTopics()-->
+  <form>
+    Filter : <input type="search" >
+  </form>
+</section>

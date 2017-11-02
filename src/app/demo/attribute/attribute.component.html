@@ -1,0 +1,35 @@
+
+<div>
+
+
+  <h3>Set Disabled</h3>
+
+  <button (click)="buttonDisabled = !buttonDisabled">Toggle disable</button>
+
+  <button [disabled]="buttonDisabled">OK</button>
+</div>
+
+<hr/>
+
+<div>
+  <h3>Variable</h3>
+
+  Enter your name :<input type="text" #name (keyup)="display(name)"> --->{{name.value}}
+
+  <button (click)="name.focus()">Focus the input</button>
+
+  <div>Pro tip : check updateZone if it's not updated</div>
+
+</div>
+
+<div>
+  <h3>Set any type value</h3>
+
+
+
+  Here is the target input<input [type]="inputType" [placeholder]="holder.value"><br/>
+
+  Choose a type : <input (change)="changeType($event)"><br/>
+  Choose a placeholder : <input #holder (keydown)="updateZone()"><br/> {{holder.value}}
+
+</div>

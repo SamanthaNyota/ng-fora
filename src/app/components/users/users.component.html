@@ -1,0 +1,8 @@
+<h2>To the moon and back :) </h2>
+<div *ngFor="let user of getUsers()" ngClass="{odd:o, even:e}">
+  <p>{{user.name + ", " }}
+  {{user.email + ", "}}
+  {{"Id: " + user.id}}</p>
+
+</div>
+<rc-user-form (eventEmitter)="updateList ($event)"></rc-user-form>

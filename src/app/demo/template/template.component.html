@@ -1,0 +1,60 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
+</div>
+
+
+<p>1 + 1 === {{1 + 1}}</p>
+<p>John Doe is {{'John' + 'Doe'}}
+
+
+<div [style.color]="favorite">
+  style.color is just Javascript property
+</div>
+
+<div id="first" [textContent]="'Some plain text'" #myDiv>
+</div>
+
+<p [innerHTML]="myDiv.textContent">
+</p>
+
+<p [className]="'user important'">
+  John Doe
+</p>
+
+
+<p [ngClass]="{user:true, important:varInComponent}">
+  Jim the Boss
+</p>
+
+
+<p [ngStyle]="{color:favorite}">
+  Jane
+</p>
+
+
+<h2>Repetitions : *ngFor, *ngIf</h2>
+
+<h3>first and last variable demo </h3>
+<div *ngFor="let user of users; let i = index; let f=first; let l=last;">
+
+  Row {{i}} : Name: <strong>{{user.name}}</strong>
+
+  <span *ngIf="f">, is first row</span>
+  <span *ngIf="l">, is last row</span>
+  <!-- try to use directly last, like in angularJS-->
+</div>
+
+<h3>even and odd variable demo </h3>
+<div *ngFor="let user of users; let i = index; let e=even; let o=odd;"
+     [ngClass]="{odd:o, even:e}">
+  {{i}} : Name: <strong>{{user.name}}</strong>
+</div>
+
+
+<h3>Optional</h3>
+
+
+<input type="text" #myInput>
+>>>>{{myInput.value}}<<<<

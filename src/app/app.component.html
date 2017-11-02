@@ -1,0 +1,7 @@
+<h1>Selected: {{state}}</h1>
+
+<label>Users: <input type="radio" name="choixAffichage"  [(ngModel)]="state" [value]="'users'"></label>
+<label>Topics: <input type="radio" name="choixAffichage" checked [(ngModel)]="state" [value]="'topics'"></label>
+
+<rc-users *ngIf="state==='users'"></rc-users>
+<rc-topics *ngIf="state==='topics'"></rc-topics>

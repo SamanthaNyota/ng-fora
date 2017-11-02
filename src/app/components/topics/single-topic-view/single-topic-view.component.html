@@ -1,0 +1,12 @@
+<div>
+<div>Single topic view</div>
+  <h3>{{topic.title}}</h3>
+
+  <ul>
+  <div *ngFor="let comment of topic.comments">
+
+    <li>{{comment.user?.name}} says: {{comment.content}}</li>
+
+  </div>
+  </ul>
+</div>
