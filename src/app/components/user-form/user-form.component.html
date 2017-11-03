@@ -2,3 +2,10 @@
   <label> Nom:<input type="text" [(ngModel)]="user.name" name= "userName" minlength="3"></label>
   <button (click)="createUser()" [disabled]="!userForm.form.valid">Add User</button>
 </form>
+
+logged: {{usersService.logged?.name}}
+<select [(ngModel)]="usersService.logged">
+  <option *ngFor="let user of getUsers()" [ngValue]="user">{{user.name}}</option>
+</select>
+
+

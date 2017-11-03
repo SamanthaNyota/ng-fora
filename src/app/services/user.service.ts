@@ -1,8 +1,10 @@
 import {Injectable} from '@angular/core';
+import {Http} from "@angular/http";
 
 
 export interface LoginService{
   getUserId():number;
+
 }
 
 
@@ -25,5 +27,3 @@ export class LoginServiceImpl implements LoginService{
   }
 
 }
-
-

@@ -6,14 +6,19 @@ import {User} from "../models/models";
 @Injectable()
 export class UsersService {
 
-
-
+  logged: User;
+  users:User[] = []
   constructor(public http: Http) {}
 
   getUsers():Observable<User[]>{
     return this.http
       .get("http://localhost:8080/jax-rs-1/api/users")
-      .map(response=>response.json());
+      .map(response=>{
+
+        const result = response.json();
+        this.users = result;
+        return result;
+      });
 
   }
 

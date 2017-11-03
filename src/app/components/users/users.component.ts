@@ -16,9 +16,11 @@ export class UsersComponent implements OnInit {
 
 
   constructor(public usersService: UsersService) {
-    this.usersService.getUsers().subscribe(users => this.users = users)
+    this.usersService.getUsers().subscribe(users => {
+      console.log(users);
+      this.users = users
+    })
   }
-
 
 
   getUsers(): User[] {

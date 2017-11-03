@@ -1,0 +1,13 @@
+<h2>{{topic.title}}</h2>
+
+<div>By: {{topic.user.name}}</div>
+
+<div *ngFor="let current of  topic.comments">
+
+  <rc-comment [comment]="current"></rc-comment>
+
+</div>
+
+<rc-comment-form [topic]=topic></rc-comment-form>
+
+

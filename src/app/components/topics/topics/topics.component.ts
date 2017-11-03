@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Topic} from "../../../models/models";
 import {TopicsService} from "../../../services/topics.service";
 
@@ -9,13 +9,14 @@ import {TopicsService} from "../../../services/topics.service";
 })
 export class TopicsComponent implements OnInit {
 
-
   topics: Topic[] = [];
   constructor(public topicsService:TopicsService) { }
 
   ngOnInit() {
 
-    this.topicsService.getTopics().subscribe(topics => this.topics = topics);
+    this.topicsService.getTopics().subscribe(topics => this.topics = topics)
+
   }
 
 }
+

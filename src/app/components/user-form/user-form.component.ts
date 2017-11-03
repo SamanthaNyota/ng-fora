@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {User} from "../../models/models";
 import {UsersService} from "../../services/users.service";
 
@@ -12,22 +12,29 @@ export class UserFormComponent implements OnInit {
   user: User;
 
   @Output() eventEmitter: EventEmitter<User> = new EventEmitter;
+ // @Input() users: User[]
 
-  constructor(public usersService: UsersService) { }
+  constructor(public usersService: UsersService) {
+  }
 
   ngOnInit() {
 
-    this.user={
-      name:"Eliana",
-      id:44,
-      email:"elisa.golgo.com",
-        admin: false
+    this.user = {
+      name: "Eliana",
+      id: 44,
+      email: "elisa.golgo.com",
+      admin: false
+    }
   }
-}
 
-createUser(){
+  createUser() {
 
-    this.usersService.createUser(this.user)
-      .subscribe(() =>this.eventEmitter.emit({...this.user}));
+    this.usersService.createUser({...this.user})
+      .subscribe(() => this.eventEmitter.emit({...this.user}));
   }
+
+  getUsers(){
+    return this.usersService.users;
+  }
+
 }

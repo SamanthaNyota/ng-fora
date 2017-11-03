@@ -1,5 +1,6 @@
-<div *ngFor="let topic of topics">
+<div *ngFor="let current of topics">
 
-  <h2>{{topic.title}}</h2>
+  <rc-topic-view [topic]="current"></rc-topic-view>
 
 </div>
+
