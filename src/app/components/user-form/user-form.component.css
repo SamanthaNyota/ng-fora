@@ -1,0 +1,31 @@
+button{
+  font: normal normal bold 16px/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,244,127,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+input{
+  font: normal 16px/1 "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: rgba(191,232,148,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  width: 160px;
+  height: auto;
+  padding: 35px 44px 39px;
+  margin: 10px 25px 0 275px;
+  overflow: hidden;
+  display: block;
+  float: none;
+  z-index: auto;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: static;
+  opacity: 1;
+  cursor: default;
+}
